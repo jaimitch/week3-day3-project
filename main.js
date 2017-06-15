@@ -70,11 +70,11 @@ function getEvens (evenNumbers){
    for (i = 0; i > evenNumbers.length; i++){
      var value = evenNumbers[i]
    }
-  if ((i % 2) == ){
+  if ((i % 2) == evenNumbers){
     evenNumbersInArray = evenNumbers
   }
 
-  return evenNumbersInArray;
+  return getEvens;
 }
 
 console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEvens should return "12,4,18,6"'});
@@ -89,6 +89,21 @@ console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEve
 
 var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
+function reverseArray(array){
+
+var descendingOrder = 999999999999999;
+
+  for (var i = 0; i <= array.length; i++) {
+    var value = array[i];
+  if (value < smallestNumberInArray){
+    smallestNumberInArray = value;
+  }
+  }
+
+return reverseArray;
+
+}
+
 console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1', {'message': 'arrayReverser should return "6,5,101,3,11,7,9,18,4,12,1"'});
 
 
@@ -97,8 +112,16 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // and returns the sum of all of the numbers in the array
 // A:
 
+var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
-//console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumbers should return 177'});
+function sumArrayOfNumbers(numbers){
+   return sumArrayofNumbers
+}
+
+
+console.assert(sumArrayOfNumbers(numbers) === 177);
+
+// {'message': 'sumArrayOfNumbers should return 177'});
 
 
 // 7.
@@ -106,6 +129,18 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // and returns an array of only the numbers greater than 10
 // A:
 
+var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+
+function numbersOver10(numbers){
+  for(i = 0; i < numbers.length; i++){
+    var value = array[i];
+    if (value > 10){
+
+
+    }
+  }
+  return numbersOver10
+}
 
 //console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message': 'numbersOver10 should return "12,18,11,101"'});
 
@@ -115,6 +150,9 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // and returns an array of only the numbers greater than the number passed to the function
 // A:
 
+var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+
+function numbersOverX()
 
 //console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
 
@@ -125,6 +163,16 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 var numbersTwo = [33,56,72,2,5,66,90,21,42];
 // A:
+
+function joinArrays(numbers, numbersTwo){
+  for(i = 0; i < numbers.length; i ++){
+    var array = numbers[i];
+    for(j = 0; j < numbersTwo.length; j++){
+      joinArrays = numbers[i] + numbers.Two[j]
+    }
+  }
+  return joinArrays
+}
 
 
 //console.assert(joinArrays([numbers, numbersTwo]).toString() === '1,12,4,18,9,7,11,3,101,5,6,33,56,72,2,5,66,90,21,42', {'message': 'joinArrays should return "1,12,4,18,9,7,11,3,101,5,6,33,56,72,2,5,66,90,21,42"'});
@@ -145,12 +193,16 @@ var instructors = [
 
 var instructorNameDiscipline = instructors[5];
 // greenvIlleInstructor = <your answer>
+"Will, JavaScript"
 
 var instructorOne = instructors[4][0];
 // instructorOne = <your answer>
+"Dan, JavaScript, JD, JavaScript"
 
 var instructorTwo = instructors[0][1];
 // instructorTwo = <your answer>
+"JD, JavaScript Tim, JavaScript"
 
 var instructorThree = instructors[2][0];
 // instructorThree = <your answer>
+"Brit, Ruby, JD, JavaScript"
