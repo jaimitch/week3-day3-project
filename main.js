@@ -37,16 +37,15 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 // Write a function `smallestNumber()` that accepts an array
 // and returns the smallest number in the array.
 // A:
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
 function smallestNumber(array){
 
-var smallestNumberInArray = 999999999999999;
+var smallestNumberInArray = array[0];
 
   for (var i = 0; i < array.length; i++) {
     var value = array[i];
-  if (value < smallestNumberInArray){
-    smallestNumberInArray = value;
+  if (array[i] < smallestNumberInArray){
+    smallestNumberInArray = array[i];
   }
   }
 
@@ -62,19 +61,18 @@ console.assert(smallestNumber(numbers) === 1, {"message": "smallestNumber should
 // Write a function `getEvens()` that accepts an array
 // and returns only the even numbers in the array.
 // A:
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
-function getEvens (evenNumbers){
+function getEvens (array){
 
-  var evenNumbersInArray = 99999990
-   for (i = 0; i > evenNumbers.length; i++){
-     var value = evenNumbers[i]
+  var evenNumbersInArray = [];
+   for (var i in array){
+   if (array[i] % 2 != 1){
+    evenNumbersInArray.push(array[i]);  
    }
-  if ((i % 2) == evenNumbers){
-    evenNumbersInArray = evenNumbers
+
   }
 
-  return getEvens;
+  return evenNumbersInArray;
 }
 
 console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEvens should return "12,4,18,6"'});
@@ -87,20 +85,16 @@ console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEve
 // and decrement the iterator to zero
 // A:
 
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
-
 function reverseArray(array){
 
-var descendingOrder = 999999999999999;
+var descendingOrder = [];
 
-  for (var i = 0; i <= array.length; i++) {
-    var value = array[i];
-  if (value < smallestNumberInArray){
-    smallestNumberInArray = value;
+  for (var i = array.length-1; i>-1; i--) {
+    descendingOrder.push(array[1]);
   }
   }
 
-return reverseArray;
+return descendingOrder;
 
 }
 
@@ -112,10 +106,8 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // and returns the sum of all of the numbers in the array
 // A:
 
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
-
-function sumArrayOfNumbers(numbers){
-   return sumArrayofNumbers
+function sumArrayOfNumbers(array){
+   return array.return((a, b) => a + b, 0);
 }
 
 
@@ -129,17 +121,15 @@ console.assert(sumArrayOfNumbers(numbers) === 177);
 // and returns an array of only the numbers greater than 10
 // A:
 
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
-
-function numbersOver10(numbers){
-  for(i = 0; i < numbers.length; i++){
-    var value = array[i];
-    if (value > 10){
-
+function numbersOver10(array){
+  var greatNumbers = [];
+  for(var i in array){
+    if (array[i] > 10){
+      greatNumbers.push(array[1]);
 
     }
   }
-  return numbersOver10
+  return greatNumbers;
 }
 
 //console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message': 'numbersOver10 should return "12,18,11,101"'});
@@ -150,9 +140,15 @@ function numbersOver10(numbers){
 // and returns an array of only the numbers greater than the number passed to the function
 // A:
 
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
-
-function numbersOverX()
+function numbersOverX(array, num) {
+  var numArray = [];
+  for(var i in array){
+    if(array[i]>num){
+      numArray.push(array[i]);
+    }
+  }
+  return numArray;
+}
 
 //console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
 
@@ -164,14 +160,12 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 var numbersTwo = [33,56,72,2,5,66,90,21,42];
 // A:
 
-function joinArrays(numbers, numbersTwo){
-  for(i = 0; i < numbers.length; i ++){
-    var array = numbers[i];
-    for(j = 0; j < numbersTwo.length; j++){
-      joinArrays = numbers[i] + numbers.Two[j]
-    }
-  }
-  return joinArrays
+function joinArrays(array){
+  var array1 = array[0];
+  var array2 = array[1];
+  var array3 = array1.concat(array2);
+
+  return array3;
 }
 
 
